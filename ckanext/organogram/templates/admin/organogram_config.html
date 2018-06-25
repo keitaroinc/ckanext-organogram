@@ -1,0 +1,30 @@
+{% extends 'admin/config.html' %}
+
+{% block page_heading %}{{  _('Manage Organogram') }}{% endblock %}  
+{% block primary_content_inner %}
+    <form method='post' action="" id="admin-config-form" enctype="multipart/form-data">
+      {% set organogram_file_url = data.organogram_file_url %}
+      {% set is_upload = organogram_file_url and not organogram_file_url.startswith('http') %}
+      {% set is_url = organogram_file_url and organogram_file_url.startswith('http') %}
+      {% set is_upload_enabled = h.uploads_enabled() %}
+      {{ form.image_upload(data, errors, is_upload_enabled=is_upload_enabled, upload_label=_('Upload a JSON file'), field_url='organogram_file_url', field_upload='organogram_file_upload', is_url=is_url, is_upload=is_upload, url_label= _('Link to JSON file')) }}
+      <div class="form-actions">
+          <button type="submit" class="btn btn-primary" name="save">{{ _('Save') }}</button>
+      </div>
+    </form>
+  {% endblock %}
+
+{% block secondary_content %}
+<div class="module module-narrow module-shallow">
+    <h2 class="module-heading">
+      <i class="fa fa-info-circle"></i>
+      {{ _('Organogram options') }}
+    </h2>
+  <div class="module module-narrow module-shallow">
+    <div class="module-content">
+      {% trans %}
+         <p><strong>Organogram Admin:</strong> Can create and remove organogram.</p>
+      {% endtrans %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+# Macedonian translations for ckanext-organogram.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the ckanext-organogram
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-organogram 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-06-25 22:46+0200\n"
+"PO-Revision-Date: 2018-06-25 22:46+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: mk\n"
+"Language-Team: mk <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ckanext/organogram/templates/admin/base.html:5
+#: ckanext/organogram/templates/header.html:6
+msgid "Organogram"
+msgstr "Органограм"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:3
+msgid "Manage Organogram"
+msgstr "Менаџирај органограм"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:10
+msgid "Upload a JSON file"
+msgstr "Прикачете JSON датотека"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:10
+msgid "Link to JSON file"
+msgstr "Линк до JSON датотека"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:12
+msgid "Save"
+msgstr "Зачувај"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:21
+msgid "Organogram options"
+msgstr "Подесувања за органограмот"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:25
+msgid ""
+" <p><strong>Organogram Admin:</strong> Can create and remove "
+"organogram.</p> "
+msgstr ""
+" <p><strong>Администрирај органограм:</strong> Може да се креира или избрише "
+"органограм.</p> "
+
+#: ckanext/organogram/templates/organogram/index.html:14
+msgid "Organogram viewer"
+msgstr "Преглед на органограм"
+
+#: ckanext/organogram/templates/organogram/index.html:18
+msgid " <p><strong>Organogram viewer:</strong> Some info here.</p> "
+msgstr "<p><strong>Преглед на органограм:</strong> Информации.</p> "
+

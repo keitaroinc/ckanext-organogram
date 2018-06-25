@@ -1,0 +1,23 @@
+{% resource 'organogram/vendor/jit-ys.js' %}
+{% resource 'organogram/modules/organogram-viewer.js' %}
+{% resource 'organogram/css/organogram.css' %}
+{% extends 'page.html' %}
+
+{% block primary_content_inner %}
+    <div id="infovis" data-module="organogram-viewer"></div>
+{% endblock %}
+
+{% block secondary_content %}
+<div class="module module-narrow module-shallow">
+    <h2 class="module-heading">
+      <i class="fa fa-info-circle"></i>
+      {{ _('Organogram viewer') }}
+    </h2>
+  <div class="module module-narrow module-shallow">
+    <div class="module-content">
+      {% trans %}
+         <p><strong>Organogram viewer:</strong> Some info here.</p>
+      {% endtrans %}
+    </div>
+  </div>
+{% endblock %}
