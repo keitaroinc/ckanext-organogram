@@ -1,4 +1,7 @@
 ckan.module('organogram-viewer', function ($) {
+  function showError() {
+    $('[data-module=organogram-viewer]').append('<div class="organogram-error"><span class="empty">' + _('Sorry, organogram data is currently unavailable.') + '</span></div>');
+  }
   return {
     initialize: function () {
       $.ajax({
@@ -11,6 +14,9 @@ ckan.module('organogram-viewer', function ($) {
               url: organogram_url,
               success: function (_result) {
                 showOrganogram(_result)
+              },
+              error: function () {
+                showError();
               }
             })
           } else {
@@ -22,7 +28,7 @@ ckan.module('organogram-viewer', function ($) {
             })
           }
         }
-      })
+      });
 
       function showOrganogram(json) {
         //Create a new ST instance
