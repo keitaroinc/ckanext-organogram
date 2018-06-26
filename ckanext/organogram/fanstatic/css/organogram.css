@@ -6,3 +6,13 @@
   background: #f8f8f8;
   border: 1px solid #ddd;
 }
+
+.organogram-error{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  font-size: 16pt;
+}
