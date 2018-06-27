@@ -1,6 +1,6 @@
-ckan.module('organogram-viewer', function ($) {
+ckan.module('organogram-viewer', function ($, _) {
   function showError() {
-    $('[data-module=organogram-viewer]').append('<div class="organogram-error"><span class="empty">' + _('Sorry, organogram data is currently unavailable.') + '</span></div>');
+    $('[data-module=organogram-viewer]').append('<div class="organogram-error"><span class="empty">' + _('Sorry, organogram data is currently unavailable.').fetch() + '</span></div>');
   }
   return {
     initialize: function () {
