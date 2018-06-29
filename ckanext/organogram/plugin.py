@@ -1,12 +1,14 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
+from ckanext.organogram import auth
 
 
 class OrganogramPlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer),
     plugins.implements(plugins.IRoutes, inherit=True)
     plugins.implements(plugins.ITranslation)
+    plugins.implements(plugins.IAuthFunctions)
 
     # IConfigurer
 
@@ -38,3 +40,10 @@ class OrganogramPlugin(plugins.SingletonPlugin, DefaultTranslation):
             controller='ckanext.organogram.controllers.organogram:OrganogramController',
             action='organogram_index')
         return map
+
+    # IAuthFunctions
+
+    def get_auth_functions(self):
+        return {
+            'config_option_show': auth.config_option_show,
+        }
