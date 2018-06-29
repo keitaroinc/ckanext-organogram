@@ -6,12 +6,14 @@ ckan.module('organogram-viewer', function ($, _) {
     initialize: function () {
       $.ajax({
         url: window.location.origin + "/api/action/config_option_show?key=ckanext.organogram.file_url",
+        dataType: 'json',
         success: function (response) {
           var organogram_file_url = response.result
           if (organogram_file_url.indexOf('http://') === -1 && organogram_file_url.indexOf('https://') === -1) {
             organogram_url = window.location.origin + '/uploads/organogram/' + organogram_file_url
             $.ajax({
               url: organogram_url,
+              dataType: 'json',
               success: function (_result) {
                 showOrganogram(_result)
               },
@@ -22,6 +24,7 @@ ckan.module('organogram-viewer', function ($, _) {
           } else {
             $.ajax({
               url: organogram_file_url,
+              dataType: 'json',
               success: function (_result) {
                 showOrganogram(_result)
               }
