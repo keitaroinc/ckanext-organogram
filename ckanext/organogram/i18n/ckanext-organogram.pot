@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-organogram 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-25 22:46+0200\n"
+"POT-Creation-Date: 2018-07-18 17:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+
+#: ckanext/organogram/fanstatic/modules/organogram-viewer.js:3
+msgid "Sorry, organogram data is currently unavailable."
+msgstr ""
 
 #: ckanext/organogram/templates/admin/base.html:5
 #: ckanext/organogram/templates/header.html:6
@@ -45,13 +49,5 @@ msgstr ""
 
 #: ckanext/organogram/templates/admin/organogram_config.html:25
 msgid " <p><strong>Organogram Admin:</strong> Can create and remove organogram.</p> "
-msgstr ""
-
-#: ckanext/organogram/templates/organogram/index.html:14
-msgid "Organogram viewer"
-msgstr ""
-
-#: ckanext/organogram/templates/organogram/index.html:18
-msgid " <p><strong>Organogram viewer:</strong> Some info here.</p> "
 msgstr ""
 
