@@ -1,0 +1,57 @@
+# Albanian translations for ckanext-organogram.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the ckanext-organogram
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-organogram 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-07-18 17:14+0200\n"
+"PO-Revision-Date: 2018-07-18 17:25+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sq\n"
+"Language-Team: sq <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ckanext/organogram/fanstatic/modules/organogram-viewer.js:3
+msgid "Sorry, organogram data is currently unavailable."
+msgstr "Na vjen keq, nuk ka të dhëna për organogramin aktualisht në dispozicion."
+
+#: ckanext/organogram/templates/admin/base.html:5
+#: ckanext/organogram/templates/header.html:6
+msgid "Organogram"
+msgstr "Organogrami"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:3
+msgid "Manage Organogram"
+msgstr "Menaxho Organogramin"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:10
+msgid "Upload a JSON file"
+msgstr "Ngarko një skedar JSON"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:10
+msgid "Link to JSON file"
+msgstr "Lidhu me skedarin JSON"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:12
+msgid "Save"
+msgstr "Ruaj"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:21
+msgid "Organogram options"
+msgstr "Opsionet e organogramit"
+
+#: ckanext/organogram/templates/admin/organogram_config.html:25
+msgid ""
+" <p><strong>Organogram Admin:</strong> Can create and remove "
+"organogram.</p> "
+msgstr ""
+" <p><strong>Administrator i Organogramit:</strong> Mund të krijojë dhe të fshijë"
+"organogrami.</p> "
