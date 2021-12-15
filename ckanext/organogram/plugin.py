@@ -14,18 +14,21 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
+import six
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.plugins import DefaultTranslation
 from ckanext.organogram import auth
+import ckanext.organogram.views.organogram as organogram_blueprint
+import ckanext.organogram.views.admin as admin_blueprint
 
 
 class OrganogramPlugin(plugins.SingletonPlugin, DefaultTranslation):
     plugins.implements(plugins.IConfigurer),
-    plugins.implements(plugins.IRoutes, inherit=True)
     plugins.implements(plugins.ITranslation)
     plugins.implements(plugins.IAuthFunctions)
+    plugins.implements(plugins.IBlueprint)
 
     # IConfigurer
 
@@ -39,24 +42,15 @@ class OrganogramPlugin(plugins.SingletonPlugin, DefaultTranslation):
         ignore_missing = toolkit.get_validator('ignore_missing')
 
         schema.update({
-            'ckanext.organogram.file_url': [ignore_missing, unicode],
+            'ckanext.organogram.file_url': [ignore_missing, six.text_type],
         })
         return schema
 
-    # IRoutes
+    # IBlueprint
 
-    def before_map(self, map):
-        map.connect(
-            'organogram_admin',
-            '/ckan-admin/organogram',
-            controller='ckanext.organogram.controllers.admin:AdminController',
-            action='organogram_admin')
-        map.connect(
-            'organogram_index',
-            '/organogram',
-            controller='ckanext.organogram.controllers.organogram:OrganogramController',
-            action='organogram_index')
-        return map
+    def get_blueprint(self):
+        return organogram_blueprint.get_blueprints() + \
+               admin_blueprint.get_blueprints()
 
     # IAuthFunctions
 

@@ -1,0 +1,14 @@
+organogram-main-style:
+  contents:
+    - css/organogram.css
+  output: organogram/%(version)s_organogram-main-style.css
+  filter: cssrewrite
+
+organogram-main-js:
+  output: organogram/%(version)s_organogram-main-js.js
+  contents:
+    - vendor/jit-ys.js
+    - modules/organogram-viewer.js
+  extra:
+    preload:
+      - base/main
